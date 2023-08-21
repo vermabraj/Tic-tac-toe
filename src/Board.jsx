@@ -28,7 +28,7 @@ const Board = () => {
         state[a] === state[b] &&
         state[a] !== state[c]
       ) {
-        return "Tie";
+       
       }
     }
     return false;
@@ -47,8 +47,14 @@ const Board = () => {
   console.log(isWinner);
   return (
     <div style={{ marginTop: "50px" }}>
-      <div> {isWinner ? <>{isWinner} won the game</> : <>{isWinner}</>}</div>
-      <button onClick={() => handleReset()}>Play again!</button>
+      <div>
+        {" "}
+        {isWinner ? <h1>{isWinner} Won the Game</h1> : <>{isWinner}</>}
+      </div>
+      <div style={{display:"flex",justifyContent:"center",alignItems:"center",height:"50px"}}>
+        
+        <button onClick={() => handleReset()} style={{background:"orange",fontWeight:"bolder",border:"none",padding:"10px",borderRadius:"7px"}}>Play again!</button>
+      </div>
 
       <>
         <div className="board-row">
